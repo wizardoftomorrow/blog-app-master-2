@@ -1,0 +1,20 @@
+extends ./application.pug
+block content
+  h3 Hello, #{user.username}! These are your posts:
+  ul
+    each post in user.posts
+      .card
+        li(class="card-title")
+        a(href="/show-1-post/"+post.id) Title:  #{post.title}
+        p(class="card-text") Message: #{post.body}
+        if(post.comments)
+          each comment in post.comments
+            p(class="card-text") Comment: #{comment.body}
+            p(class="card-text") User: #{comment.user.username}
+
+        form(class="col s12" action="/delete/"+post.id method="delete")
+          button(class="btn waves-effect waves-light right" type="submit" name="action") DELETE
+            i(class="material-icons right")
+        a(class="col s12" href="/edit/"+post.id)
+          button(class="btn waves-effect waves-light left" type="submit" name="action") EDIT
+            i(class="material-icons right")

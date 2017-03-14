@@ -1,0 +1,52 @@
+body {
+  font-family: "Calibri";
+}
+
+nav {
+  background-color: #fff;
+  opacity: 0.5;
+  position: fixed;
+}
+
+.btn, .btn-large {
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.left {
+float: left;
+}
+
+.right {
+float: right;
+}
+nav .brand-logo {
+  color: black;
+  left: 40%;
+}
+
+nav li a {
+  color: black;
+
+
+}
+
+.main-header {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: 75%;
+}
+
+.card {
+    margin: 0 25% 0 25%;
+    width: 50%;
+  }

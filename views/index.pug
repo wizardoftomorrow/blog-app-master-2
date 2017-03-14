@@ -1,0 +1,15 @@
+extends ./application.pug
+block content
+  h3(class="main-header") Blog posts
+  ul
+    each post in posts
+      div(class="col s12 m6")
+        .card
+          li(class="card-title")
+          a(href="/show-1-post/"+post.id) Title:  #{post.title}
+          p(class="card-text") Message: #{post.body}
+          p(class="card-text") User: #{post.user.username}
+          if(post.comments)
+            each comment in post.comments
+              p(class="card-text") Comment: #{comment.body}
+              p(class="card-text") User: #{comment.user.username}

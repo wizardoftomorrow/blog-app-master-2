@@ -1,0 +1,14 @@
+extends ./application.pug
+block content
+  h3 Login
+  div(class="row")
+  form(class="col s12" action="/log-in" method="post")
+    div(class="row")
+      div(class="cardcontainer")
+      div(class="col s6")
+        label(for="username") Username
+        input(placeholder="Username" name="username" id="username" type="text" class="validate")
+        label(for="password") Password
+        input(placeholder="Password" name="password" id="username" type="password" class="validate")
+    button(class="btn" type="submit" name="action") Submit
+      i(class="material-icons right")
